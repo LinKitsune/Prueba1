@@ -1,0 +1,38 @@
+<!-- Formulario alumnos -->
+<section>
+  <fieldset>
+    <label>Ingrese la dv del Alumno</label>
+    <input type="number" [value]="alumno.dv" (input)="cDv($event)">
+  </fieldset>
+  <fieldset>
+    <label>Ingrese el rut del Alumno</label>
+    <input type="text" [value]="alumno.run" (input)="cRun($event)">
+  </fieldset>
+  <fieldset>
+    <label>Ingrese el nombre del Alumno</label>
+    <input type="text" [value]="alumno.nombre" (input)="cNombre($event)">
+  </fieldset>
+  <fieldset>
+    <label>Ingrese el apellido del Alumno</label>
+    <input type="text" [value]="alumno.apellido" (input)="cApellido($event)">
+  </fieldset>
+  <fieldset>
+    <label>Ingrese la edad del Alumno</label>
+    <input type="number" [value]="alumno.edad" (input)="cEdad($event)">
+  </fieldset>
+  <fieldset>
+    <label>Seleccione la seccion</label>
+    <select [value]="alumno.nsec" (change)="cSec($event)">
+      <option *ngFor="let variable of se"
+      [value]="variable"
+      >
+        {{variable}}
+      </option>
+    </select>
+  </fieldset>
+  <fieldset>
+    <button type="button" (click)="guardarElemento()">Guardar</button>
+  </fieldset>
+
+</section>
+
